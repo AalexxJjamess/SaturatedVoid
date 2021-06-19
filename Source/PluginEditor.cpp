@@ -16,6 +16,8 @@ FabPluginAudioProcessorEditor::FabPluginAudioProcessorEditor (FabPluginAudioProc
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     
+    
+    
     driveAttatchment = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "DRIVE", driveKnob );
     volumeAttatchment = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "VOLUME", volumeKnob );
     blendAttatchment = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "BLEND", blendKnob );
@@ -43,7 +45,7 @@ FabPluginAudioProcessorEditor::FabPluginAudioProcessorEditor (FabPluginAudioProc
     volumeKnob.setSliderStyle(juce::Slider::Rotary);
     volumeKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 30, 25);
     
-
+    setResizable(false, false);
     
 }
 
@@ -61,9 +63,9 @@ void FabPluginAudioProcessorEditor::paint (juce::Graphics& g)
     g.setFont (15.0f);
     g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
 
-    
     Image background = ImageCache::getFromMemory (BinaryData::osqpic_jpg, BinaryData::osqpic_jpgSize);
         g.drawImageAt (background, 0, 0);
+    
     
     driveKnob.setBounds(60, 225, 150, 150);
     rangeKnob.setBounds(235, 225, 150, 150);
@@ -75,4 +77,5 @@ void FabPluginAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
+    
 }

@@ -4,7 +4,7 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="Y7FEru" name="FabPlugin">
     <GROUP id="{0F2CAF3B-3307-94FD-4323-F3A18D90B0B5}" name="Resources">
-      <FILE id="CSpBNH" name="osqpic.jpg" compile="0" resource="1" file="../../../../../Desktop/osqpic.jpg"/>
+      <FILE id="UOZVNe" name="osqpic.jpg" compile="0" resource="1" file="../../../../Downloads/osqpic.jpg"/>
     </GROUP>
     <GROUP id="{B05A5A34-7895-360D-67FF-8D660A0A2AB3}" name="Source">
       <FILE id="giBhPL" name="PluginProcessor.cpp" compile="1" resource="0"
